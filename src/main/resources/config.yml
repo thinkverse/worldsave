@@ -1,0 +1,35 @@
+# ------------------------------------------
+#      WorldSavePlugin - Configuration
+# ------------------------------------------
+#    save.every: minutes in int format,
+#                defaults to 25 minutes
+#    save.worlds: list of worlds to save
+# ------------------------------------------
+save:
+  every: 25
+  worlds:
+    - world_the_end
+    - world_nether
+    - world
+# ------------------------------------------
+#  messages.notify: boolean, true\false
+#   notify users with worldsave.notify?
+#  messages.start|end: string
+#   default message to broadcast to users
+#  messages.admin - same thing, affects?
+#   worldsave.admin.notify perm node,
+#   make sure a users don't have both perms
+# ------------------------------------------
+messages:
+  notify: true
+  start: '&fAll worlds will now be saved!'
+  end: '&fAll worlds have been saved!'
+  admin:
+    notify: true
+    start: '&fAll worlds will now be saved!'
+    end: '&fAll worlds have been saved!'
+    force: "&e{player} &fforce saved worlds."
+# ------------------------------------------
+#  Self explanatory right? I hope...
+# ------------------------------------------
+prefix: '&7[&5WorldSave&7] &r'

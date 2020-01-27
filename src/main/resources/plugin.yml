@@ -1,0 +1,24 @@
+name: WorldSavePlugin
+version: ${project.version}
+main: com.github.thinkverse.worldsave.WorldSavePlugin
+api-version: '1.13'
+prefix: WorldSavePlugin
+author: thinkverse
+description: World saves plugin
+website: thinkverse.dev
+commands:
+  worldsave:
+    description: Main WorldSave command
+    usage: /<command> <save|reload>
+    permission: worldsave.admin
+    aliases: ['ws']
+permissions:
+  worldsave.notify:
+    description: Notify users world save is in progress
+    default: false
+  worldsave.admin:
+    description: Give access to WorldSave command
+    default: op
+  worldsave.admin.notify:
+    description: Notify admin users world save is in progress
+    default: op
