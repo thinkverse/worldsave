@@ -65,7 +65,6 @@ public final class WorldSavePlugin extends JavaPlugin {
     return getConfig().getString("prefix", "") + getConfig().getString(String.format("messages.%s", type));
   }
 
-
   protected final void registerCommand(@NotNull final String command, @NotNull CommandExecutor executor, boolean tabCompleter) {
     Objects.requireNonNull(this.getCommand(command)).setExecutor(executor);
     if (tabCompleter) registerTabCompleter(command, (TabCompleter) executor);
@@ -74,4 +73,5 @@ public final class WorldSavePlugin extends JavaPlugin {
   protected final void registerTabCompleter(@NotNull final String command, @NotNull TabCompleter completer) {
     Objects.requireNonNull(this.getCommand(command)).setTabCompleter(completer);
   }
+
 }
